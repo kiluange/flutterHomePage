@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import './pages/login.page.dart';
 
 void main() => runApp(MyApp());
 
@@ -12,6 +13,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: Colors.purple[500],
         buttonColor: Colors.purple[500],
+        backgroundColor: Colors.grey[500]
       ),
       home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -67,7 +69,9 @@ class _MyHomePageState extends State<MyHomePage> {
               RaisedButton(
                 child: Text('Sign In'),
                 textColor: Colors.white,
-                onPressed: () => {},
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>LoginPage()));
+                },
               ),
               RaisedButton(
                 child: Row(
