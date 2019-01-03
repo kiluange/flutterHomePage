@@ -1,6 +1,7 @@
 # login_page
 
 ![](https://github.com/kiluange/flutterHomePage/blob/master/Screenshot_1.png)
+![](https://github.com/kiluange/flutterHomePage/blob/master/Screenshot_2.png)
 
 A new Flutter project.
 
