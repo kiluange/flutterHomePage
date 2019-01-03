@@ -6,9 +6,12 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _scaffoldKey,
+      endDrawer: Drawer(),
       body: ListView(
         children: <Widget>[
           Column(
@@ -74,7 +77,9 @@ class _LoginPageState extends State<LoginPage> {
                                 color: Colors.white,
                                 size: 32,
                               ),
-                              onPressed: ()=>{},
+                              onPressed: (){
+                                _scaffoldKey.currentState.openEndDrawer();
+                              }
                             ),
                           ),
                         ],
